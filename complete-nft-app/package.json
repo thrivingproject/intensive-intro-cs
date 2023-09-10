@@ -1,0 +1,33 @@
+{
+  "name": "nft-super-app",
+  "version": "1.0.0",
+  "description": "Generate, upload, and deploy NFTs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node generate.js",
+    "set-metadata": "node utils/set_metadata.js",
+    "upload-images": "node utils/upload_images.js",
+    "upload-metadata": "node utils/upload_metadata.js"
+  },
+  "keywords": [],
+  "author": "Christian Isaman",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@openzeppelin/contracts": "^4.6.0",
+    "@pinata/sdk": "^1.1.23",
+    "axios": "^0.24.0",
+    "base-path-converter": "^1.0.2",
+    "bottleneck": "^2.19.5",
+    "canvas": "^2.9.1",
+    "dotenv": "^10.0.0",
+    "ethers": "^5.0.0",
+    "form-data": "^4.0.0",
+    "fs-extra": "^10.0.0",
+    "hardhat": "^2.9.3",
+    "ipfs-only-hash": "^4.0.0",
+    "recursive-fs": "^2.1.0"
+  }
+}

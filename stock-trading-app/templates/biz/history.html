@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<!-- Citation: finance.cs50 HTML -->
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-start">Symbol</th>
+            <th class="text-end">Shares</th>
+            <th class="text-end">Price</th>
+            <th class="text-end">Transacted</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for txn in user_history %}
+        <tr>
+            <td class="text-start">{{ txn.symbol }}</td>
+            <td class="text-end">{{ txn.shares }}</td>
+            <td class="text-end">{{ txn.price }}</td>
+            <td class="text-end">{{ txn.time }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <p>A share of {{ iex_api_quote.name }} ({{ iex_api_quote.symbol }}) costs {{ iex_api_quote.price | usd }}</p>
+{% endblock %}
